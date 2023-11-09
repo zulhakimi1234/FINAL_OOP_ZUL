@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #e0cac8;
+            padding: 10px 20px;
+        }
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+        .logo p {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+            font-size: 28px;
+            color: #442c2e;
+            margin: 0;
+        }
+        .nav-button a {
+            margin-left: 20px;
+            color: #442c2e;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #f8e9e9;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+        }
+        .nav-button a:hover {
+            background-color: #442c2e;
+            color: #f8e9e9;
+        }
+        .exit {
+            width: 20px;
+            height: 20px;
+        }
+        .form0 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+            color: #442c2e;
+        }
+        input {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            width: 400px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        button {
+            padding: 12px 24px;
+            background-color: #e0cac8;
+            border: none;
+            color: #442c2e;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+        }
+        button:hover {
+            background-color: #442c2e;
+            color: #e0cac8;
+        }
+        h2 {
+            text-align: center;
+            color: #442c2e;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin-top: 20px;
+        }
+        hr {
+            border: 0;
+            clear: both;
+            display: block;
+            width: 96%;
+            background-color: #ddd;
+            height: 1px;
+            margin: 20px auto;
+        }
+        #image-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+    <title>Uni Search</title>
+</head>
+<body>
+    <!--NAVIGATION-->
+    <nav>
+        <div class="logo">
+            <p>GLAMSPHERE MAKEUP</p>
+        </div>
+        
+        <div class="nav-button">
+            <a href="index.html">HOME</a>
+            <a href="favourite.html">FEEDBACK</a>
+            <a href="#" onclick="self.close();" style="padding: 10px; border-radius: 5px; background-color: #f8e9e9;"><img src="close.png" alt="Close" class="exit"></a>
+        </div>
+    </nav>
+
+    <!--MAIN FORM-->
+    <div align="center" class="mainWrapper">
+        <div class="form0">
+            <label>BRAND :</label>
+            <input type="text" id="makeup_input" class="form-control0" placeholder="Enter makeup brand">
+            <label class="one">TYPE:</label>
+            <input type="text" id="type_input" class="form-control0" placeholder="Enter makeup type">
+            <br>
+            <button type="button" class="default" onclick="buttonClicked()">ENTER</button>
+        </div>
+        <h2>RESULTS</h2>
+        <hr>
+        <br><br>
+        <div id="image-container">
+            <p id="display"></p>
+        </div>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
